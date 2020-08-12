@@ -63,7 +63,7 @@ class ConsensusRunner(EventRegister):
         self._first_height_of_this_epoch = 0
 
         self._loop = asyncio.get_event_loop()
-        last_block_height = 0
+        last_block_height = -1
         if self._block_manager.blockchain.last_block:
             last_block_height = self._block_manager.blockchain.last_block.header.height
 
